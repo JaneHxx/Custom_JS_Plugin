@@ -1,0 +1,42 @@
+.calendar-container{
+    width: 400px;
+    height: 300px;
+    border: 1px solid orange;
+}
+.calendar-container .calendar-header{
+    padding: 0 20px;
+    height: 23px;
+    box-sizing: border-box;
+}
+.calendar-container .calendar-header::after{
+    content: '';
+    clear: both;
+}
+.calendar-container .calendar-header .calendar-date{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+.calendar-container .calendar-header .prev
+,.calendar-container .calendar-header .next{
+    display: inline-block;
+    width: 20px;
+    border: 1px solid #cccccc;
+    background-color: darkseagreen;
+    float: left;
+}
+.calendar-container .calendar-header .prev{
+    margin-left: -100%;
+    position: relative;
+    left: -20px;
+}
+.calendar-container .calendar-header .next{
+    margin-left: -22px;
+    position: relative;
+    right: -22px;
+}
+
+.calendar-container .calendar-grid{
+    width: 100%;
+}
