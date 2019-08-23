@@ -1,11 +1,11 @@
 .calendar-container{
     width: 400px;
-    height: 300px;
     border: 1px solid orange;
+    padding-bottom: 0;
 }
 .calendar-container .calendar-header{
     padding: 0 20px;
-    height: 23px;
+    height: 21px;
     box-sizing: border-box;
 }
 .calendar-container .calendar-header::after{
@@ -22,9 +22,11 @@
 ,.calendar-container .calendar-header .next{
     display: inline-block;
     width: 20px;
-    border: 1px solid #cccccc;
-    background-color: darkseagreen;
+    background-color: orange;
     float: left;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
 }
 .calendar-container .calendar-header .prev{
     margin-left: -100%;
@@ -39,4 +41,36 @@
 
 .calendar-container .calendar-grid{
     width: 100%;
+}
+
+.calendar-grid .calendar-labels
+, .calendar-grid .calendar-dates{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.calendar-labels span
+,.calendar-dates span{
+    display: block;
+    width: calc(100%/7.2);
+    text-align: center;
+    border: 1px solid #ccc;
+    border-left: 0;
+    font-weight: bold;
+}
+.calendar-dates span{
+    border-top: 0;
+    height: 35px;;
+    line-height: 35px;
+    border-color: orange;
+    color:orangered;
+}
+.calendar-labels span:last-child
+, .calendar-dates span:last-child
+,.calendar-dates span.no-bd-right{
+    border-right: 0;
+}
+.calendar-dates span.active{
+    background-color: orange;
 }
