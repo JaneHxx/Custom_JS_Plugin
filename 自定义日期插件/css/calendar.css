@@ -50,6 +50,10 @@
     flex-wrap: wrap;
 }
 
+.calendar-grid .calendar-dates{
+    cursor: pointer;
+}
+
 .calendar-labels span
 ,.calendar-dates span{
     display: block;
